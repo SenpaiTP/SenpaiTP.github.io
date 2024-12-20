@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
-    <h1>HelloWorld</h1>
+    <div>
+      <App />
+      <h1>Hello World</h1>
+    </div>
   </React.StrictMode>
 );
