@@ -1,7 +1,15 @@
 import React from "react";
-import { ThemeProvider } from '@mui/material/styles';
-import theme from '../Styles/Theme';
-import { Box, Container, Paper, TextField, Button, Typography, Grid2 } from "@mui/material";
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "../Styles/Theme";
+import {
+  Box,
+  Container,
+  Paper,
+  TextField,
+  Button,
+  Typography,
+  Grid2,
+} from "@mui/material";
 import Header from "../Components/Header"; // Import the Header component
 import { useNavigate } from "react-router-dom";
 
@@ -35,7 +43,6 @@ const Portfolio = () => {
           Learn More About Me
         </Button>
       </Box>
-
       {/* About Me Section */}
       <Container sx={{ py: 5 }}>
         <Typography variant="h4" gutterBottom>
@@ -54,7 +61,6 @@ const Portfolio = () => {
           </Grid2>
         </Grid2>
       </Container>
-
       {/* Contact Me Section */}
       <Container sx={{ py: 5 }}>
         <Typography variant="h4" gutterBottom>
@@ -67,7 +73,12 @@ const Portfolio = () => {
                 <TextField fullWidth label="Name" variant="outlined" required />
               </Grid2>
               <Grid2 item xs={12} sm={6}>
-                <TextField fullWidth label="Email" variant="outlined" required />
+                <TextField
+                  fullWidth
+                  label="Email"
+                  variant="outlined"
+                  required
+                />
               </Grid2>
               <Grid2 item xs={12}>
                 <TextField
@@ -88,7 +99,7 @@ const Portfolio = () => {
           </form>
         </Paper>
       </Container>
-      </ThemeProvider>
+    </ThemeProvider>
   );
 };
 
