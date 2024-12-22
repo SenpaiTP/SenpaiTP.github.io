@@ -14,7 +14,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontFamily: '"Montserrat","Roboto", "Helvetica", "Arial", sans-serif',
     h1: {
       fontSize: "2.5rem",
       fontWeight: 500,

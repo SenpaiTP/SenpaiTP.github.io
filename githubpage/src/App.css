@@ -13,6 +13,14 @@
   }
 }
 
+/* In your global CSS file (e.g., index.css or App.css) */
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

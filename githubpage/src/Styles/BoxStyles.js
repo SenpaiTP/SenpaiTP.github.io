@@ -6,7 +6,7 @@ const GradientBox = ({ children, sx = {} }) => (
     sx={{
       ...sx,
       backgroundImage:
-        "linear-gradient(to bottom right, rgb(20, 2, 43) 1%, black 100%)",
+        "linear-gradient(to bottom right, rgb(30, 0, 69) 1%, black 100%)",
       color: "white",
     }}
   >

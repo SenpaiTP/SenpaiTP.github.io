@@ -34,7 +34,7 @@ const AboutPage = () => {
             Go Back Home
           </Button>
         </Box>
-        <Box sx={{ py: 5, paddingX: 30 }}>
+        <Box sx={{ py: 5, paddingX: 50 }}>
           <Box
             sx={{
               border: "2px solid transparent", // Define the width of the border
@@ -55,10 +55,11 @@ const AboutPage = () => {
                     <Typography variant="body1">
                       I'm a 5th-semester Software Technology student at Aarhus
                       University. My primary focus is on Back-end development,
-                      where I enjoy building robust and scalable systems, but
-                      I’ve also explored other exciting areas of software
-                      engineering, including Front-end development, game
-                      development, and embedded systems.
+                      where I enjoy building robust and scalable systems. <br />
+                      <br />
+                      During my studies i have also worked with other areas of
+                      software engineering, including Front-end development,
+                      game development, embedded systems, algorithms, .
                     </Typography>
                   </Grid2>
                 </Grid2>
@@ -71,7 +72,7 @@ const AboutPage = () => {
                 <Typography variant="h2" gutterBottom>
                   Experience
                 </Typography>
-                <Grid2 container spacing={4}>
+                <Grid2 container spacing={4} direction="column">
                   {experienceData.map((experience, index) => (
                     <ExperienceCard key={index} {...experience} />
                   ))}

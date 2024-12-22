@@ -1,40 +1,57 @@
 import React from "react";
+import { Grid2, Card, CardContent, Typography, Box } from "@mui/material";
 import {
-  Grid2,
-  Card,
-  CardContent,
-  Typography,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-} from "@mui/material";
-import {
-  Javascript as JavascriptIcon,
-  GitHub as GitHubIcon,
   Storage as StorageIcon,
   Html as HtmlIcon,
   Css as CssIcon,
   Http as HttpIcon,
 } from "@mui/icons-material";
-import cIcon from "../assets/images/CodeIcons/CIcon.png";
-import PythonIcon from "../assets/images/CodeIcons/PythonIcon.png";
-import csIcon from "../assets/images/CodeIcons/C#Icon.png";
-import dockerIcon from "../assets/images/CodeIcons/DockerIcon.png";
+const icons = {
+  CIcon: require("../assets/images/CodeIcons/CIcon.png"),
+  PythonIcon: require("../assets/images/CodeIcons/PythonIcon.png"),
+  CsIcon: require("../assets/images/CodeIcons/CsIcon.png"),
+  DockerIcon: require("../assets/images/CodeIcons/DockerIcon.png"),
+  JsIcon: require("../assets/images/CodeIcons/JSIcon.png"),
+  GitHubIcon: require("../assets/images/CodeIcons/GithubIcon.png"),
+  MongoDBIcon: require("../assets/images/CodeIcons/MongoDBIcon.png"),
+};
 
 // Experience data
 export const experienceData = [
   {
     title: "Adept",
     skills: [
-      { icon: <JavascriptIcon />, label: "JavaScript (ES6+)" },
-      { icon: <GitHubIcon />, label: "GitHub" },
-      { icon: <StorageIcon />, label: "MongoDB" },
+      {
+        icon: (
+          <img src={icons.JsIcon} alt="JS" style={{ width: 24, height: 24 }} />
+        ),
+        label: "Javascript",
+      },
+      {
+        icon: (
+          <img
+            src={icons.GitHubIcon}
+            alt="GitHub"
+            style={{ width: 24, height: 24 }}
+          />
+        ),
+        label: "GitHub",
+      },
+      {
+        icon: (
+          <img
+            src={icons.MongoDBIcon}
+            alt="MongoDB"
+            style={{ width: 24, height: 24 }}
+          />
+        ),
+        label: "MongoDB",
+      },
       { icon: <StorageIcon />, label: "SQL" },
       {
         icon: (
           <img
-            src={PythonIcon}
+            src={icons.PythonIcon}
             alt="Python"
             style={{ width: 24, height: 24 }}
           />
@@ -42,17 +59,21 @@ export const experienceData = [
         label: "Python",
       },
       {
-        icon: <img src={cIcon} alt="C" style={{ width: 24, height: 24 }} />,
+        icon: (
+          <img src={icons.CIcon} alt="C" style={{ width: 24, height: 24 }} />
+        ),
         label: "C",
       },
       {
-        icon: <img src={csIcon} alt="C#" style={{ width: 24, height: 24 }} />,
+        icon: (
+          <img src={icons.CsIcon} alt="C#" style={{ width: 24, height: 24 }} />
+        ),
         label: "C#",
       },
       {
         icon: (
           <img
-            src={dockerIcon}
+            src={icons.DockerIcon}
             alt="Docker"
             style={{ width: 24, height: 24 }}
           />
@@ -69,27 +90,35 @@ export const experienceData = [
     ],
   },
   {
-    title: "Newbie",
+    title: "Novice",
     skills: [{ icon: <HttpIcon />, label: "Express.js" }],
   },
 ];
 
 // Experience Card Component
 export const ExperienceCard = ({ title, skills }) => (
-  <Grid2 item xs={12} sm={6} md={4}>
+  <Grid2 item xs={12}>
     <Card sx={{ backgroundColor: "transparent" }}>
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {title}
         </Typography>
-        <List>
+        {/* Grid layout for skills */}
+        <Grid2 container spacing={7} justifyContent="center">
           {skills.map((skill, index) => (
-            <ListItem key={index}>
-              <ListItemIcon>{skill.icon}</ListItemIcon>
-              <ListItemText primary={skill.label} />
-            </ListItem>
+            <Grid2 item xs={6} sm={4} md={3} key={index}>
+              <Box display="flex" flexDirection="column" alignItems="center">
+                {React.cloneElement(skill.icon, {
+                  style: {
+                    width: 48, // Increase the width to 32 pixels
+                    height: 48, // Increase the height to 32 pixels
+                  },
+                })}
+                <Typography sx={{ ml: 1 }}>{skill.label}</Typography>
+              </Box>
+            </Grid2>
           ))}
-        </List>
+        </Grid2>
       </CardContent>
     </Card>
   </Grid2>
