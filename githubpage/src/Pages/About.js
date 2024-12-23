@@ -5,9 +5,9 @@ import { Typography, Button, Container, Grid2, Box } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "../Styles/Theme";
 
-// Import the new components
-import { experienceData, ExperienceCard } from "../Components/ExperienceCard";
-import GradientBox from "../Styles/BoxStyles";
+import { experienceData } from "../Data/experinceData";
+import ExperienceCard from "../Components/ExperienceCard";
+import { GradientBox } from "../Styles/BoxStyles";
 
 const AboutPage = () => {
   const navigate = useNavigate();
