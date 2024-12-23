@@ -1,0 +1,30 @@
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.carousel-item-padding-40-px {
+  padding: 0 20px; /* Add padding to prevent overlapping */
+}
+
+.react-multi-carousel-item {
+  display: flex;
+  justify-content: center; /* Center-align the cards */
+}
+
+.carousel-item {
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
+}
+
+.carousel-item--active {
+  transform: scale(1); /* Focused item */
+  opacity: 1;
+}
+
+.carousel-item--inactive {
+  transform: scale(0.8); /* Smaller size for non-focused items */
+  opacity: 0.7;
+}

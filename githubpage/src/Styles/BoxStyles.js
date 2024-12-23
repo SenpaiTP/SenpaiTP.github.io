@@ -19,12 +19,14 @@ export const GradientBox = ({ children, sx = {} }) => (
 export const projectCardStyles = (sx = {}) => ({
   cursor: "pointer",
   borderRadius: "20px", // Rounded corners
-  backgroundColor: "black", // Dark background for contrast
-  color: "white", // White text
-  width: "300px", // Fixed width
+  backgroundColor: "rgb(143, 98, 70)", // Dark background for contrast
+  color: "black", // Black text
+  width: "100%", // Allow the carousel to control the width
+  maxWidth: "300px", // Limit maximum width
   height: "400px", // Fixed height
   display: "flex", // Center content
   flexDirection: "column", // Align items vertically
-  // justifyContent: "center", // Center content vertically
-  alignItems: "center", // Center cntent horizontally
+  alignItems: "center", // Center content horizontally
+  margin: "auto", // Center within the carousel
+  boxSizing: "border-box", // Include padding/borders in dimensions
 });

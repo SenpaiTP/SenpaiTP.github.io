@@ -23,11 +23,6 @@ export const experienceData = [
   {
     title: "Adept",
     skills: [
-      { icon: "JsIcon", label: "Javascript" },
-      { icon: "GitHubIcon", label: "GitHub" },
-      { icon: "MongoDBIcon", label: "MongoDB" },
-      { icon: "StorageIcon", label: "SQL" },
-      { icon: "PythonIcon", label: "Python" },
       { icon: "CIcon", label: "C" },
       { icon: "CsIcon", label: "C#" },
       { icon: "DockerIcon", label: "Docker" },
@@ -36,12 +31,18 @@ export const experienceData = [
   {
     title: "Intermediate",
     skills: [
-      { icon: "HtmlIcon", label: "HTML5" },
-      { icon: "CssIcon", label: "CSS3" },
+      { icon: "JsIcon", label: "Javascript" },
+      { icon: "GitHubIcon", label: "GitHub" },
+      { icon: "MongoDBIcon", label: "MongoDB" },
+      { icon: "StorageIcon", label: "SQL" },
+      { icon: "PythonIcon", label: "Python" },
     ],
   },
   {
     title: "Novice",
-    skills: [{ icon: "HttpIcon", label: "Express.js" }],
+    skills: [
+      { icon: "HtmlIcon", label: "HTML5" },
+      { icon: "CssIcon", label: "CSS3" },
+    ],
   },
 ];

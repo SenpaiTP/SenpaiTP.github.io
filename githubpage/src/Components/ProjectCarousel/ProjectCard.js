@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Typography } from "@mui/material";
 import ReactCardFlip from "react-card-flip";
 import { Card, CardContent, CardActions } from "@mui/material";
-import { projectCardStyles } from "../Styles/BoxStyles"; // Import your style file
+import { projectCardStyles } from "../../Styles/BoxStyles"; // Import your style file
 
-export const ProjectCard = ({ project }) => {
+export const ProjectCard = ({ projectsData }) => {
   const [flip, setIsFlipped] = useState(false);
 
   const handleFlip = () => {
@@ -17,10 +17,10 @@ export const ProjectCard = ({ project }) => {
       <Card onClick={handleFlip} sx={projectCardStyles}>
         <CardContent>
           <Typography variant="h5" component="div">
-            {project.title}
+            {projectsData.title}
           </Typography>
           <Typography variant="body2" component="p">
-            {project.description}
+            {projectsData.description}
           </Typography>
         </CardContent>
       </Card>
@@ -29,11 +29,22 @@ export const ProjectCard = ({ project }) => {
       <Card onClick={handleFlip} sx={projectCardStyles}>
         <CardContent>
           <Typography variant="h5" component="div">
-            {project.title}
+            {projectsData.title}
           </Typography>
           <Typography variant="body2" component="p">
-            {project.technologies}
+            {projectsData.technologies}
           </Typography>
+          {/* Conditionally render the link */}
+          {projectsData.githubLink ? (
+            <a
+              href={projectsData.githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "white" }}
+            >
+              Github link to project
+            </a>
+          ) : null}
           <CardActions>
             <Typography variant="body2" color="white">
               Click anywhere to flip back.
