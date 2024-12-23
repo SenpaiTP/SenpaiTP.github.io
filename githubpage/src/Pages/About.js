@@ -25,14 +25,6 @@ const AboutPage = () => {
           <Typography variant="h5" gutterBottom>
             Learn more about me and my projects.
           </Typography>
-          <Button
-            variant="contained"
-            color="secondary"
-            size="large"
-            onClick={() => navigate("/")}
-          >
-            Go Back Home
-          </Button>
         </Box>
         <Box sx={{ py: 5, paddingX: 50 }}>
           <Box
