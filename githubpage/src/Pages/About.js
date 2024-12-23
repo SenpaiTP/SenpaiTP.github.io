@@ -47,7 +47,14 @@ const AboutPage = () => {
                     <Typography variant="body1">
                       I'm a 5th-semester Software Technology student at Aarhus
                       University. My primary focus is on Back-end development,
-                      where I enjoy building robust and scalable systems. <br />
+                      where I enjoy building robust and scalable systems.
+                      <br />
+                      <br />
+                      In backend development, I have primarily worked with the
+                      ASP.NET including EF Core, Logging, DI, Middleware,
+                      Identity, Web API, and MVC environment and have developed
+                      a strong understanding of it.
+                      <br />
                       <br />
                       During my studies i have also worked with other areas of
                       software engineering, including Front-end development,
