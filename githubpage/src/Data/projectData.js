@@ -26,6 +26,7 @@ export const projectsData = [
     technologies:
       "C# (ASP .NET Core), React (JS), SQL Database and MongoDB Log database",
     githubLink: "https://github.com/SenpaiTP/SW4_PRJ_V2",
+    imgSrc: require("../assets/images/4PRJ.png"),
   },
   // Add more project objects as needed
 ];

@@ -32,8 +32,16 @@ export const ProjectCard = ({ projectsData }) => {
             {projectsData.title}
           </Typography>
           <Typography variant="body2" component="p">
-            {projectsData.technologies}
+            Technologies used in the project : {projectsData.technologies}
           </Typography>
+          {projectsData.imgSrc && (
+            <img
+              src={projectsData.imgSrc}
+              alt={`${projectsData.title} preview`}
+              style={{ width: "100%", height: "auto", marginBottom: "1rem" }}
+            />
+          )}
+
           {/* Conditionally render the link */}
           {projectsData.githubLink ? (
             <a

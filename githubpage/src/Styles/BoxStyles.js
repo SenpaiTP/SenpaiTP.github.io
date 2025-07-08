@@ -19,11 +19,11 @@ export const GradientBox = ({ children, sx = {} }) => (
 export const projectCardStyles = (sx = {}) => ({
   cursor: "pointer",
   borderRadius: "20px", // Rounded corners
-  backgroundColor: "rgb(143, 98, 70)", // Dark background for contrast
-  color: "black", // Black text
+  backgroundColor: "rgba(0, 238, 255, 0.58)", // Dark background for contrast
+  color: "white", // Black text
   width: "100%", // Allow the carousel to control the width
   maxWidth: "300px", // Limit maximum width
-  height: "400px", // Fixed height
+  height: "600px", // Fixed height
   display: "flex", // Center content
   flexDirection: "column", // Align items vertically
   alignItems: "center", // Center content horizontally
