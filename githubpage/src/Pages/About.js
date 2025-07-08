@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../Components/Header";
 import { useNavigate } from "react-router-dom";
 import { Typography, Button, Container, Grid2, Box } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
@@ -14,8 +13,6 @@ const AboutPage = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      {/* Header Section */}
-      <Header />
       {/* Main Content Section with Border */}
       <GradientBox sx={{ paddingY: 10 }}>
         <Box sx={{ py: 5, textAlign: "center" }}>
@@ -45,7 +42,7 @@ const AboutPage = () => {
                 <Grid2 container spacing={4} alignItems="center">
                   <Grid2 item xs={12} md={6}>
                     <Typography variant="body1">
-                      I'm a 5th-semester Software Technology student at Aarhus
+                      I'm a 6th-semester Software Technology student at Aarhus
                       University. My primary focus is on Back-end development,
                       where I enjoy building robust and scalable systems.
                       <br />
@@ -68,7 +65,7 @@ const AboutPage = () => {
             {/* Experience Section */}
             <Box sx={{ py: 5 }}>
               <Container>
-                <Typography variant="h2" gutterBottom>
+                <Typography variant="h2" gutterBottom sx={{ textAlign: "center" }}>
                   Experience
                 </Typography>
                 <Grid2 container spacing={4} direction="column">

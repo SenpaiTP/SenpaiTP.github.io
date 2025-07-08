@@ -13,7 +13,7 @@ export const projectsData = [
     githubLink: "https://github.com/SenpaiTP/SemesterProject2",
   },
   {
-    title: "3. Senester Project",
+    title: "3. Semester Project",
     description:
       "Self adjusting solar panel, that messaures effectiness and saves data to python flask website.",
     technologies: "Python, C, Flask, Electrical circuit, Photodiodes and Motor",

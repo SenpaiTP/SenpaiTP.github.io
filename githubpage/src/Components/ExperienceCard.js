@@ -6,11 +6,11 @@ const ExperienceCard = ({ title, skills }) => (
   <Grid2 item xs={12}>
     <Card sx={{ backgroundColor: "transparent" }}>
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography gutterBottom variant="h5" component="div" align="center">
           {title}
         </Typography>
         {/* Grid layout for skills */}
-        <Grid2 container spacing={7} justifyContent="center">
+        <Grid2 container spacing={4} justifyContent="center">
           {skills.map((skill, index) => {
             const Icon = icons[skill.icon]; // Dynamically get the icon
             return (
