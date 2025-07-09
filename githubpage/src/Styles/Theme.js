@@ -21,6 +21,7 @@ const theme = createTheme({
       color: "#ffffff", // White color for headings
     },
     h2: {
+
       fontWeight: 500,
       color: "#ffffff", // White color for headings
     },

@@ -7,11 +7,7 @@ import ProjectCarousel from "../Components/ProjectCarousel/projectCarousel";
 
 const Portfolio = () => {
   return (
-    <ThemeProvider theme={theme}>
-
-
-      {/* Hero Section */}
-      <GradientBox sx={{ paddingY: 10, paddingX: 40 }}>
+      <Box sx={{ py: 5 }}>
         <Box sx={{ py: 5, textAlign: "center" }}>
           <Typography variant="h2" gutterBottom>
             Portfolio
@@ -23,8 +19,7 @@ const Portfolio = () => {
         <Container>
           <ProjectCarousel projectsData={projectsData} />
         </Container>
-      </GradientBox>
-    </ThemeProvider>
+      </Box>
   );
 };
 
